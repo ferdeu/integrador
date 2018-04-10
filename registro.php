@@ -32,7 +32,7 @@
           'apellido'=>$apellido,
 					'email' => $email,
 					'password' => password_hash($password,PASSWORD_DEFAULT),
-					'imagenperfil' => guardarArchivoSubido('imagenperfil', 'imagen_perfil_','./archivos/fotos/perfil/')
+					'imagenperfil' => guardarArchivoSubido('imagenperfil', 'imagen_perfil_','./imgperfiles/')
 				]);
 
 				$infoUsuario = traerInfoUsuarioPorCampo('email', $email);
