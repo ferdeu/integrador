@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+html{
+	font-family: 'Lora';
+}
+body {
+  background-image: url("../img/back-login.jpg");
+  padding-top: 20%;
+}
+
+h1,
+.login,
+.account,
+.contact{
+  width:80%;
+  margin: 0 auto;
+}
+a{
+	text-decoration: none;
+}
+input{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+@supports (display: flex) {
+  body {
+    padding:0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h1, .login, .account, .contact {
+    margin: 0;
+    width: 80%;
+  }
+}
+a {
+	font-size: 60%;
+	float: right;
+}
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: 80%;
+    align-content: center;
+    align-items: stretch;
+  }
+  @media (min-width: 650px) {
+    body {
+      grid-template-columns: repeat(2, minmax(150px, 30%));
+    }
+    h1,
+    .login {
+      grid-column-end: span 2;
+      width: 100%;
+    }
+
+    .login > div.actions {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .account {
+      border-right: 1px dotted rgb(191, 216, 227);
+      padding: 0 10px 0 0;
+      align-self: end;
+      width: auto;
+    }
+    .contact {
+      padding: 0 0 0 10px;
+      width: auto;
+    }
+    input[type="submit"] {
+      grid-column: 2;
+    }
+    .actions a {
+      justify-self: end;
+    }
+		a {
+			font-size: 80%;
+		}
+  }
+}
+
+h1 {
+	color: white;
+  background-color: rgba(107, 107, 107, 0.8);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+	text-align: center;
+}
+
+.login {
+  background-color: rgba(191, 216, 227, .4);
+  border: 1px solid rgba(191, 216, 227, .8);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.login > div {
+  padding: 5px 0;
+}
+
+input[type="submit"] {
+  border: 1px solid rgba(191, 216, 227, .8);
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(28, 45, 80);
+  font-size: 110%;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid rgba(191, 216, 227, .8);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 110%;
+  width: 100%;
+}
+label{
+	text-align: center;
+}
+
+/*----------------
+ 	Logo
+----------------*/
+.logo1 {
+	width: 70%;
+	}
+}
+@media (min-width: 425px){
+.logo1 {
+	width: 70%;
+	}
+}
+@media (min-width: 650px){
+.logo1 {
+	width: 150%;
+	}
+}
+@media (min-width: 768px){
+.logo1 {
+	width: 150%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+}
+@media (min-width: 1024px){
+.logo1 {
+	width: 165%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+}
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #414a4f;
+	padding: 0;
+  width: 100%;
+}
+
+footer ul{
+	display: flex;
+	margin-bottom: 25px;
+  padding-left: 0px;
+	font-size: 32px;
+  text-decoration:none;
+  list-style: none;
+}
+
+footer ul li{
+	margin: 0 8px;
+}
+
+footer ul li:first-child{
+	margin-left: 0;
+}
+
+footer ul li:last-child{
+	margin-right: 0;
+}
+
+footer p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+
+footer p a{
+	color: #fff;
+}
+h5{
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 1024px){
+	footer ul{
+		font-size: 14px;
+	}
+  h5{
+    font-size: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px){
+
+	footer{
+		padding: 1px;
+	}
+}
+@media (max-width: 375px){
+	footer ul{
+		font-size: 12px;
+	}
+}
+@media (max-width: 375px){
+	footer ul{
+		font-size: 10px;
+	}
+}
